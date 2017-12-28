@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  # gogs:
+  #   links:   
+  #       - "mysql:mysql"  
+  #       - "redis:redis"
+  #   ports:
+  #     - "10080:3000"
+  #     - "10022:22"
+  #   networks:  
+  #     - "bridge"
+  #   volumes: 
+  #     - "gogs-data:/data"
+  #   image: "gogs/gogs"
+  tensorflow:
+    ports:
+     - "2233:22"
+    image: godcong/remotetf
+    volumes:
+      - "./keys:/root/.ssh"
+      - "/home"
