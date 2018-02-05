@@ -8,9 +8,8 @@ FROM alpine:latest
 #添加我的信息
 MAINTAINER godcong (jumbycc@163.com)
 
-COPY ./IntelliJIDEALicenseServer/IntelliJIDEALicenseServer_linux_amd64 /home/jbs
+COPY ./jbs /home/jbs
 
 EXPOSE 1027
 
-#sshd -D 非deamon模式运行
 CMD ["/home/jbs"]
